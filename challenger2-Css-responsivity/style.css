@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    /* GRADIENTE DE FUNDO DO SITE */
+    background: linear-gradient(120deg,
+            /* É o angulo do linear na vertical */
+            rgba(2, 0, 36, 1) 0%,
+            /* Cor inicial do gradiente: r de red , g de green, b de blue , a de alfa transparencia. 0% ela indica que começa no inicio do gradiente.*/
+            rgba(9, 9, 121, 1) 50%,
+            /* É a segunda cor do gradiente, o 50% indica que vai aparecer no meio do gradiente o 1 indicado no " alfa " indica que a cor e totalmente opaco*/
+            rgba(0, 212, 255, 1) 100%);
+    /* Cor final do gradiente, 100% indica que essa cor vai aparecer no final do gradiente.*/
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: antiquewhite;
+
+}
+
+/* aqui estelizo o header e os filhos que sao: h1 e as nav com links*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* não sei se o code abaixo esta correto para deixar a nav bar fixa */
+    /* 
+    z-index: 1000;
+    position: fixed;
+    top: 0; */
+}
+
+h1 {
+    /* margin-left: 20px; 
+     Usei para dar espaçamento do lado esquerdo empurando o h1 mais para a direita*/
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+
+    /* margin-right: 20px;
+    Usado para empurar as nav da direta para esquerda, para nao ficar tão coloda no fin da page */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a {
+    text-decoration: none;
+    color: antiquewhite;
+    display: block;
+    /* Esse block serve para que o transform scale funcione na navbar */
+}
+
+h1:hover,
+nav a:hover {
+    /* aqui e para dar estilo ao nav bar, mudando cor e fazendo os nomes deram " zoom " ao passar mouse me cima */
+    transform: scale(1.1);
+    color: rgba(0, 212, 255, 1);
+}
+
+/* Aqui estelizo a pagina principal a HOME, dentro dela estelizo os filhos form e  div img - deixando tudo centraluzado*/
+#home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-container {
+    /* Aqui estilizo a form e os filhos que são: Divs. Ai depois as Divs viram pai das label e dos inputs*/
+    flex: 2;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image {
+    /* div pai do " image tulipa " - Aqui estelizo a div que contem a imagem dentro */
+    flex: 1;
+}
+
+.photo-tulipa {
+    /* Img da tulipa - Aqui estilizo a imagem em si*/
+    height: 300px;
+    width: 250px;
+    border-radius: 50% 30% 30% 50%;
+}
+
+/* Aqui vamos estelizar os filhos da form no caso as label e inputs*/
+.containers {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+/* aqui vamos estelizar os placeHolders . cuidado pq isso esteliza todos os inputs das pagina, se quer tudo igual Ok, se nao use as class desejadas.*/
+input {
+    text-align: center;
+}
+
+/* agora vamos estelizar os inputs deixar os mais bonitos*/
+input {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.bttn-submit {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    margin-top: 10px;
+    /* usado para dar espaçamento entre o input phone e submit, se esta certo nao sei. vou saber depois.*/
+    box-shadow: 1px 1px 20px rgba(0, 212, 255, 1);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.bttn-submit:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 212, 255, 1);
+}
+
+/* ESTELIZANDO AS BOX FILHAS PARA O MEIO DA TELA .*/
+#projects {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* usado para que as caixas caibam na mesma linha e se ela nao caber ela vai para baixo deixando mais responsivo.*/
+}
+
+/* ESTELIZAÇÃO DOS CARDS USANDO APENAS UMA CLASS PARA TODOS E DEIXAMOS TODOS IGUAIS E CENTRALIZADOS. 
+CASO QUERO ESTELIZAR INDIVIDUAL, MUDA OS NOME DAS DIV CLASS OU ESTILIZO POR ETAPA NO CASO LABEL E INPUTS SEPARADOS.*/
+.projects-card {
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    box-shadow: 1px 1px 10px rgba(0, 212, 255, 1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Aqui estelizamos os filhos do container " about " que no caso é o h2 e os p. não vou estelizar muito, do jeito que ta ta bom.*/
+#about {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estelização da caixa filhos que no casso e as div com */
+#contacts {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.linkdin ul,
+.github ul,
+.tels ul {
+    list-style: none;
+    border: 1px solid rgba(2, 0, 36, 1);
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(2, 0, 36, 0.8);
+    box-shadow: 2px 2px 20px rgba(2, 0, 36, 1);
+}
+
+.linkdin a,
+.github a,
+.tels a {
+    text-decoration: none;
+    color: antiquewhite;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.linkdin a:hover,
+.github a:hover,
+.contacts a:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    height: 100px;
+}
+
+@media (max-width:768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+
+    }
+
+    #home {
+        flex-direction: column;
+    }
+
+    #projects {
+        flex-direction: column;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    #contacts {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:480px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    #home {
+        flex-direction: column;
+    }
+
+    #projects {
+        flex-direction: column;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    #contacts {
+        flex-direction: column;
+    }
+}

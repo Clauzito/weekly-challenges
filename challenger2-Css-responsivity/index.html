@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge week 2 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Welcome
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#home"> HOME</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#about"> ABOUT</a></li>
+                <li><a href="#contacts"> CONTACTS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <form class="form-container">
+                <div class="containers">
+                    <label for="user"> Name:</label>
+                    <input type="text" name="user" id="user" class="" placeholder="Write your Name here" required>
+                </div>
+                <div class="containers">
+                    <label for="email"> Email:</label>
+                    <input type="email" name="email" id="email" class="" placeholder="Write your Email here" required>
+                </div>
+                <div class="containers">
+                    <label for="phone"> Phone Number:</label>
+                    <input type="tel" name="phone" id="phone" class="" placeholder="Write your Number here"
+                        pattern="[0-9]{10-11}" required>
+                    <!-- pattern passa instrução para ser aceite apenas numeros, de [ 0 - 9 ] e { 10 - 11} entre chaves e ate 10 ou 11 numeros -->
+                </div>
+                <div>
+                    <button type="submit" id="bttn-submit" class="bttn-submit">
+                        SUBMIT
+                    </button>
+                </div>
+            </form>
+            <div class="image">
+                <img src="./image/tulipa.jpg" alt="photoOftulipa" class="photo-tulipa">
+            </div>
+        </section>
+        <section id="projects">
+            <div class="projects-card">PROJECT 1</div>
+            <div class="projects-card">PROJECT 2</div>
+            <div class="projects-card">PROJECT 3</div>
+            <div class="projects-card">PROJECT 4</div>
+            <div class="projects-card">PROJECT 5</div>
+            <div class="projects-card">PROJECT 6</div>
+        </section>
+        <section id="about">
+            <h2>
+                this is my history :P
+            </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            <p>quod et amet repellat possimus nesciunt rem aperiam dolore beatae inventore, obcaecati enim quas cum nemo
+                voluptate facilis nobis sed ut!</p>
+        </section>
+        <section id="contacts">
+            <div class="linkdin">
+                <nav>
+
+                    <ul>
+                        <li>
+                            <a href="#">linkdIn</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="github">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Github</a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="tels">
+                <nav class="cards-contact">
+                    <ul>
+                        <li>
+                            <a href="#">Numbers</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy 2026 Challenge test project</p>
+    </footer>
+</body>
+
+</html>
